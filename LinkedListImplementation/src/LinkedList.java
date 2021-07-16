@@ -31,9 +31,7 @@ public class LinkedList {
 		
 		Node node = new Node();
 		node.data = value;
-		
 		Node n = head;
-		
 		
 		for(int i = 0; i < index - 1; i++) {
 			n = n.next;
@@ -45,13 +43,6 @@ public class LinkedList {
 		}
 		
 		else {
-			/* messy solution
-			Node n1;
-			n1 = n.next;
-			n.next = node;
-			Node n2 = n.next;
-			n2.next = n1;
-			*/
 			node.next = n.next;
 			n.next = node;
 		}
@@ -144,7 +135,7 @@ public class LinkedList {
 		}
 		*/
 		
-		// * optimized solution *
+		/* optimized solution */
 		for(int i = 0; i < k; i++) {
 			n = n.next;
 		}
